@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import "./App.css";
+import Navbar from "./Components/Navbar";
+import Search from "./Components/Filters/Search";
+import TopRecomendation from "./Components/TopRecom";
+import Trending from "./Components/Trending";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from "react-router-dom";
+import TopManga from "./Components/Filters/TopManga";
+let sum = "hey";
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+        <Navbar />
+        {console.log(sum)}
+        {/* <Search word={props.data}/> */}
+        <TopRecomendation/>
+        <Trending/>
+        {/* <TopManga/> */}
+        {/* <TopAnime/> */}
+          {/* <Route path="/Search" element={<Search word="my hero academia"/>}/> */}
+          {/* <Route path="/" element={ <App/>}/> */}
     </div>
   );
 }
