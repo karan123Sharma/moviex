@@ -17,7 +17,7 @@ export default function TopManga() {
   return (
     <div>
     <h2 className="trend">Top Manga</h2>
-      {dataArray.map((ele) => {
+      {dataArray?.map((ele) => {
           return ((<div className="manga">
         <img src={ele.images?.jpg?.image_url} alt="" />
         <h1>{ele.title.length>=8?ele.title.slice(0,10)+"...":ele.title}</h1>

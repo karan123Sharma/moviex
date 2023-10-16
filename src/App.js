@@ -14,8 +14,8 @@ function App(props) {
   return (
     <div className="app">
         <Navbar />
-        {console.log(sum)}
-        {/* <Search word={props.data}/> */}
+        {/* {console.log(sum)} */}
+        {/* <Search word="food wars"/> */}
         <TopRecomendation/>
         <Trending/>
         {/* <TopManga/> */}

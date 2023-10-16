@@ -15,7 +15,7 @@ const Trending = (props) => {
       try {
         const response = await fetch(url);
         const data = await response.json();
-        setDataArray(data.data);
+        setDataArray((prev) => data.data);
       } catch (error) {
         console.log('Error fetching data:', error);
       }
@@ -28,7 +28,7 @@ const Trending = (props) => {
       <div className="complete">
         <div className="conatiner">
           <div className="grid-container">
-            {data.map((element) => {
+            {data?.map((element) => {
               return (
                 <Trendingcomp
                   title={Str_size(element.title_english)}

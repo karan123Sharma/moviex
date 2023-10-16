@@ -19,7 +19,7 @@ const TopRecomendation = (props) => {
   return (
     <>
       <div className="media-Scroller">
-      {dataArray.map((ele)=>{
+      {dataArray?.map((ele)=>{
         count++;
         return (<div className="TopRecom">
           <div className="spotlight">
